@@ -1,1 +1,55 @@
-// Mixins in here
+
+// Mixins in here.
+
+.btn(@base, @hover)
+{
+    //Inherit the base_button class
+    .base_button;
+    background-color: @eastern-blue;
+    padding: right 40%;
+    padding-bottom: @size;
+
+    //child element with class text inside class button
+    .text
+    {
+        .base_button;
+        text-align: center;
+        vertical-align: middle;
+        background-color: @hover;
+        padding: @size+4;
+        
+        //On Mouse hover
+        &:hover
+        {
+           font-size:@size +8;
+        }
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+//@media only screen and (min-width: 600px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+//@media only screen and (min-width: 1200px) {...}
+
+// ///**
+//  * These values will not show up in content, but can be 
+//  * queried by JavaScript to know which breakpoint is active.
+//  * Add or remove as many breakpoints as you like.
+//  */
+// body:before {
+//   content: "smartphone";
+//   display: none; /* Prevent from displaying. */
+// }
+// @media (min-width: 700px) {
+//   body:before {
+//     content: "tablet";
+//   }
+// }
+// @media (min-width: 1100px) {
+//   body:before {
+//     content: "desktop";
+//   }
+// }
+  
